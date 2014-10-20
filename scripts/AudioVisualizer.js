@@ -1,4 +1,8 @@
 ﻿var AudioVisualizer = function() {
+    /// <summary>
+    /// s this instance.
+    /// </summary>
+    /// <returns></returns>
     var
         numberOfBars = ko.observable(10),
         scene,
@@ -144,6 +148,17 @@
                 //add the created bar to the scene
                 scene.add(bars[i]);
             }
+        },
+
+        mobileFileUpload = function() {
+            // if the client is a mobile browser
+            // then we push a file upload popup
+            // assign that to the Audio context
+        },
+
+        handleUnknownOrUnsupportedFileType = function() {
+            // this function would be called wherever a 
+            // file is uploaded by the user
         },
         
         initialize = function() {
