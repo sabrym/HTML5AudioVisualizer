@@ -1,4 +1,4 @@
-﻿var AudioVisualizer = function() {
+var AudioVisualizer = function(){
     /// <summary>
     /// s this instance.
     /// </summary>
@@ -116,7 +116,13 @@
 
                 fileReader.onload = function (e) {
                     var fileResult = e.target.result;
-                    start(fileResult);
+                    var fileType = 'audio/mp3';
+                    if(file.type.match(fileType)){
+                       start(fileResult);
+                    }
+                    else{
+                        alert('Unsupported file');
+                    }
                 };
 
                 fileReader.onerror = function (e) {
@@ -161,6 +167,13 @@
             // file is uploaded by the user
         },
         
+        isFileValid = function (audioFile){
+            if(audioFile)
+            {
+
+            }
+        },
+
         initialize = function() {
             //generate a ThreeJS Scene
             scene = new THREE.Scene();
