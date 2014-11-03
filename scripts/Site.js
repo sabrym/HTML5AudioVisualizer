@@ -1,9 +1,10 @@
-﻿/*
+/*
 Audio Visualizer by Raathigeshan.
-http://raathigesh.com/
+Modified by Sabry Moulana
 */
 
 $(document).ready(function () {
+    // main entry point to the application
     var visualizer = new AudioVisualizer();
     visualizer.initialize();
     visualizer.createBars();

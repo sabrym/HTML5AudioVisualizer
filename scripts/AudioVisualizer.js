@@ -165,6 +165,7 @@ var AudioVisualizer = function(){
         handleUnknownOrUnsupportedFileType = function() {
             // this function would be called wherever a 
             // file is uploaded by the user
+            return throw Error('Unsupported File');
         },
         
         isFileValid = function (audioFile){
